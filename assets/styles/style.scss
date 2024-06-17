@@ -1,0 +1,302 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    font-family: $main-font;
+
+    header {
+        @include flex;
+        gap: 110px;
+        width: 100%;
+        height: 15vh;
+        background-color: $background-color;
+        padding-top: 6px;
+        position: fixed;
+        z-index: 2;
+
+       .header-ball {
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            background: black;
+            margin-left: 24%;
+            margin-top: 3vh;
+        p {
+            color: white;
+            text-align: center;
+            justify-content: center;
+            margin-top: 17%;
+            font-size: 3rem;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+                    }
+                }
+        .h1 {
+            h1 {
+                font-weight: 500;
+                font-size: clamp (16px,4vw, 30px);
+                font-stretch: 100%;
+                margin-top: 13vh;
+                cursor: pointer;
+                }}
+       input {
+        display: none}
+
+        .burger {
+            font-size: 40px;
+            color: rgb(57, 44, 44);
+            border: 1px solid black;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: none;
+            &:active {
+                background-color: rgba(108, 95, 95, 0.471);
+             }}
+                nav {
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 16px;
+                        margin: 0;
+                        padding: 0;
+                        line-height: 35px;
+                        font-weight: 300;
+                        display: none;
+                           li {
+                            a {
+                               text-decoration: none;
+                               color: $main-color;
+                               &:hover
+                               {
+                               color: rgba(117, 106, 106, 0.443);
+                                }
+                                &:active {
+                                    background-color: rgba(108, 95, 95, 0.471);
+                                 }}}}}}  
+        main {
+        @include flex;
+        justify-content: start;
+        column-gap: 50px;
+        width:100%;
+        position: relative;
+            
+         .left-aside {
+            top: 15%;
+            margin-left: 22.5%;
+            position: fixed;
+            z-index: 1;
+
+          nav {
+             ul {
+             list-style: none;
+             font-size: 16px;
+             line-height: 35px;
+             font-weight: 300;
+                li {
+                 a {
+                    text-decoration: none;
+                    color: $main-color;
+                    &:hover{
+                    color: rgba(117, 106, 106, 0.443);
+                     }
+                     &:active {
+                        background-color: rgba(108, 95, 95, 0.471);
+                     }
+                    }}}}}                         
+    .right-aside {
+        margin-left: 35vw;
+        margin-top: 15vh;
+        .main-pic {
+           width: 100%;
+        img {
+            width: 100%;
+            margin-top: 3vh;
+            object-fit: cover;
+            display: block;
+            }}
+        h2 {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 30px;
+            color: $main-color;
+            }
+
+        .image-container {
+            @include flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            .image-wrapper {
+                position: relative;
+                width: 40vw;
+                height: 90vh;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                }
+            .overlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background-color: rgba(0, 0, 0, 0.5); 
+                transition: 0.3s ease;
+                &:hover {
+                    opacity: 2.0;
+                }
+            .social-icons {
+                display: grid;
+                grid-template-columns: 11fr 1fr 1fr;
+                padding-left: 40px;
+                margin-top: 90%;
+            a {
+                text-decoration: none;
+                color: white;
+                }
+            .icon-heart {
+                font-size: 20px; 
+                transition: 0.3 ease;
+                &:hover {
+                    opacity: 0.5;
+                    }}
+            .icon-share {
+                font-size: 18px; 
+                transition: 0.3 ease;
+                &:hover {
+                    opacity: 0.5;
+                    }}
+            .icon-download {
+                font-size: 18px; 
+                transition: 0.3 ease;
+                &:hover {
+                    opacity: 0.5;
+                }}}}}}
+       
+     .pressimage-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 35px;
+        row-gap: 190px;
+        width: 100%;
+    .pressimage-wrapper{
+    img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        &:hover {
+            opacity: 0.5;
+        }}
+    p {
+       font-size: 14px;     
+        }}}  
+    
+            .bio {
+            max-width: 50%;
+            .bio-img {
+                width: 100%;
+                height: auto;
+            }
+            .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+            font-size:14px;
+            line-height: 21px;
+            font-weight: 300;
+            .column-1{
+              flex:1;
+            }}
+            h3 { 
+                font-size: 16px;
+                margin-bottom: 2%;
+                }
+            .subtitle {
+                font-size: 16px;
+                }}
+
+    .contact {
+        @include flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 5px;
+    .contact-data {
+       ul {
+        list-style: none;
+        font-size: 16px;
+        font-weight: 300;
+        padding-left: 0;
+       li 
+       a {
+        text-decoration: none;
+        color: $main-color;
+       }}}
+    .soc-med-icons {
+        ul {
+        @include flex;
+        flex-direction: row;
+        list-style: none;
+        padding-left: 0;
+        gap: 15px;
+        li  
+        a {
+            color: $main-color;
+            }}}
+        .contbox {
+            width:25vw;
+        form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+        input {
+              padding: 8px;
+              border: 1px solid $main-color;
+              box-sizing: border-box;
+              background-color:$background-color;
+              outline: none;
+              &:hover {
+                  background-color: rgb(167, 161, 161);
+                   }}
+        textarea {
+             height: 15vh;
+             padding: 8px;
+             outline: none;
+             background-color: $background-color;
+             transition: 5 ease;
+             resize: none;
+             &:hover {
+                  background-color: rgb(167, 161, 161);
+                  }}
+        .input-submit {
+            margin-left: 60%;
+            width: 40%;
+            padding: 7px 50px;
+            color: white;
+            font-weight: 50;
+            background-color: $main-color;
+            border: none;
+                &:hover {
+                    background-color: rgb(167, 161, 161);
+                }}}}}}}
+                footer {
+                    margin-left: 35%;
+                    width: 100%;
+                    margin-left: 35%;
+                    position: fixed;
+                    bottom: 0;
+                    font-size: 13px;
+                    line-height: 23px;
+                    font-weight: 300;
+                    background-color: $background-color;
+                    }
+               }
+        
+        
+            

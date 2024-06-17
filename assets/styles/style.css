@@ -1,0 +1,317 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  font-family: "Roboto", sans-serif;
+}
+body header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 110px;
+  width: 100%;
+  height: 15vh;
+  background-color: #f3f3f3;
+  padding-top: 6px;
+  position: fixed;
+  z-index: 2;
+}
+body header .header-ball {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: black;
+  margin-left: 24%;
+  margin-top: 3vh;
+}
+body header .header-ball p {
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-top: 17%;
+  font-size: 3rem;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+}
+body header .h1 h1 {
+  font-weight: 500;
+  font-size: clamp 16px, 4vw, 30px;
+  font-stretch: 100%;
+  margin-top: 13vh;
+  cursor: pointer;
+}
+body header input {
+  display: none;
+}
+body header .burger {
+  font-size: 40px;
+  color: rgb(57, 44, 44);
+  border: 1px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: none;
+}
+body header .burger:active {
+  background-color: rgba(108, 95, 95, 0.471);
+}
+body header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  line-height: 35px;
+  font-weight: 300;
+  display: none;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+body header nav ul li a:hover {
+  color: rgba(117, 106, 106, 0.443);
+}
+body header nav ul li a:active {
+  background-color: rgba(108, 95, 95, 0.471);
+}
+body main {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  justify-content: start;
+  column-gap: 50px;
+  width: 100%;
+  position: relative;
+}
+body main .left-aside {
+  top: 15%;
+  margin-left: 22.5%;
+  position: fixed;
+  z-index: 1;
+}
+body main .left-aside nav ul {
+  list-style: none;
+  font-size: 16px;
+  line-height: 35px;
+  font-weight: 300;
+}
+body main .left-aside nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+body main .left-aside nav ul li a:hover {
+  color: rgba(117, 106, 106, 0.443);
+}
+body main .left-aside nav ul li a:active {
+  background-color: rgba(108, 95, 95, 0.471);
+}
+body main .right-aside {
+  margin-left: 35vw;
+  margin-top: 15vh;
+}
+body main .right-aside .main-pic {
+  width: 100%;
+}
+body main .right-aside .main-pic img {
+  width: 100%;
+  margin-top: 3vh;
+  object-fit: cover;
+  display: block;
+}
+body main .right-aside h2 {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000;
+}
+body main .right-aside .image-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+body main .right-aside .image-container .image-wrapper {
+  position: relative;
+  width: 40vw;
+  height: 90vh;
+}
+body main .right-aside .image-container .image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .right-aside .image-container .image-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+body main .right-aside .image-container .image-wrapper .overlay:hover {
+  opacity: 2;
+}
+body main .right-aside .image-container .image-wrapper .overlay .social-icons {
+  display: grid;
+  grid-template-columns: 11fr 1fr 1fr;
+  padding-left: 40px;
+  margin-top: 90%;
+}
+body main .right-aside .image-container .image-wrapper .overlay .social-icons a {
+  text-decoration: none;
+  color: white;
+}
+body main .right-aside .image-container .image-wrapper .overlay .social-icons .icon-heart {
+  font-size: 20px;
+  transition: 0.3 ease;
+}
+body main .right-aside .image-container .image-wrapper .overlay .social-icons .icon-heart:hover {
+  opacity: 0.5;
+}
+body main .right-aside .image-container .image-wrapper .overlay .social-icons .icon-share {
+  font-size: 18px;
+  transition: 0.3 ease;
+}
+body main .right-aside .image-container .image-wrapper .overlay .social-icons .icon-share:hover {
+  opacity: 0.5;
+}
+body main .right-aside .image-container .image-wrapper .overlay .social-icons .icon-download {
+  font-size: 18px;
+  transition: 0.3 ease;
+}
+body main .right-aside .image-container .image-wrapper .overlay .social-icons .icon-download:hover {
+  opacity: 0.5;
+}
+body main .right-aside .pressimage-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
+  row-gap: 190px;
+  width: 100%;
+}
+body main .right-aside .pressimage-container .pressimage-wrapper img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .right-aside .pressimage-container .pressimage-wrapper img:hover {
+  opacity: 0.5;
+}
+body main .right-aside .pressimage-container .pressimage-wrapper p {
+  font-size: 14px;
+}
+body main .right-aside .bio {
+  max-width: 50%;
+}
+body main .right-aside .bio .bio-img {
+  width: 100%;
+  height: auto;
+}
+body main .right-aside .bio .columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+}
+body main .right-aside .bio .columns .column-1 {
+  flex: 1;
+}
+body main .right-aside .bio h3 {
+  font-size: 16px;
+  margin-bottom: 2%;
+}
+body main .right-aside .bio .subtitle {
+  font-size: 16px;
+}
+body main .right-aside .contact {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 5px;
+}
+body main .right-aside .contact .contact-data ul {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 0;
+}
+body main .right-aside .contact .contact-data ul li a {
+  text-decoration: none;
+  color: #000;
+}
+body main .right-aside .contact .soc-med-icons ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  gap: 15px;
+}
+body main .right-aside .contact .soc-med-icons ul li a {
+  color: #000;
+}
+body main .right-aside .contact .contbox {
+  width: 25vw;
+}
+body main .right-aside .contact .contbox form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+body main .right-aside .contact .contbox form input {
+  padding: 8px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  outline: none;
+}
+body main .right-aside .contact .contbox form input:hover {
+  background-color: rgb(167, 161, 161);
+}
+body main .right-aside .contact .contbox form textarea {
+  height: 15vh;
+  padding: 8px;
+  outline: none;
+  background-color: #f3f3f3;
+  transition: 5 ease;
+  resize: none;
+}
+body main .right-aside .contact .contbox form textarea:hover {
+  background-color: rgb(167, 161, 161);
+}
+body main .right-aside .contact .contbox form .input-submit {
+  margin-left: 60%;
+  width: 40%;
+  padding: 7px 50px;
+  color: white;
+  font-weight: 50;
+  background-color: #000;
+  border: none;
+}
+body main .right-aside .contact .contbox form .input-submit:hover {
+  background-color: rgb(167, 161, 161);
+}
+body footer {
+  margin-left: 35%;
+  width: 100%;
+  margin-left: 35%;
+  position: fixed;
+  bottom: 0;
+  font-size: 13px;
+  line-height: 23px;
+  font-weight: 300;
+  background-color: #f3f3f3;
+}
+
+/*# sourceMappingURL=style.css.map */

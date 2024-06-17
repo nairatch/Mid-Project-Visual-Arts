@@ -1,0 +1,128 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@media screen and (max-width: 1440px) {
+    body {
+        header {
+            gap: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        header {
+            gap: 15px;
+        }
+    }
+}
+ 
+@media screen and (max-width: 768px) {
+    body {
+    header { 
+        justify-content: space-around;
+  .header-ball {
+       width: 80px;
+       height: 80px;
+       margin-left: 0%;
+       
+    p {
+        font-size: 2rem;
+        margin-top: 18%;
+        }}
+        
+    .h1 {
+        h1 {
+            font-size: 30px;
+            }}
+    .burger {
+        display: inline-block;
+        margin-left: -40%;
+        margin-bottom: -40%;
+    }
+        nav {
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                padding-top: 150px;
+                right: -100%;
+                background-color:$background-color;
+                z-index: 100;
+                transition: 0.5 ease;
+                &:hover{
+                    color: rgba(117, 106, 106, 0.443);
+                     }
+                     &:active {
+                        background-color: rgba(108, 95, 95, 0.471);
+                     }}} 
+            input:checked ~ ul {
+                right: 0%;
+                display: block;
+                }}
+    main {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 9%;
+
+    .right-aside {
+        width: 100%;
+    
+        .contact {
+        .contbox {
+         width: 65vw;
+            }}
+
+    .image-container {
+        flex-direction: column;
+        gap: 5px;
+       .image-wrapper{
+        width: 100vw;
+        height: 35vh;
+            }
+        }
+    .bio {
+        max-width: 100%;
+        .columns {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }}
+            .left-aside {
+            display: none;
+            }}
+
+        footer {
+            margin-left: 8%;
+             }}}
+
+    @media screen and (max-width: 425px) {
+        body {
+        main {
+            .right-aside {
+            .contact {
+            .contbox {
+             width: 85vw;
+            }}
+            .pressimage-container {
+             grid-template-columns: 1fr;
+            }}}}}
+    @media screen and (max-width: 375px) {
+        body {
+            header {
+                    }}}
+    @media screen and (max-width: 320px) {
+        body {
+            header {
+               }
+            main {
+                .right-aside {
+                .contact {
+                .contbox {
+                 width: 80vw;
+                }}}}
+            }}
+
+
